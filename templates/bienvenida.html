@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BLOG  </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+</head>
+<body>
+    <h1>BIENVENIDOS A ESTE SU BLOG DE COMIDA  </h1>
+    <section>
+        {% for elemento in articulos %}
+            <article>
+               <h3>{{elemento.nombre }}</h3>
+               <p>
+                {{elemento.contenido}}
+               </p>
+               <img src="{{elemento.imagen}}"></img>
+               <footer>AUTOR: {{elemento.autor}}</footer>
+               <a href="https://www.burgerking.com.mx/menu/#bebidas-y-cafe" target="self">ingrese aqui..</a>
+            </article>
+        {% endfor%}
+        
+    </section>
+
+
+</body>
+    </html>
